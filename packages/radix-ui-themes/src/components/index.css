@@ -1,0 +1,65 @@
+@import './reset.css';
+@import './animations.css';
+@import './layout.css';
+
+/* Import Skeleton before other components so that its default border-radius doesn’t have a higher specificity */
+@import 'skeleton/skeleton.css';
+
+/* Import Text before other components as it’s commonly extended */
+@import 'text/text.css';
+
+@import 'accessible-icon/alert-dialog.css';
+@import 'avatar/avatar.css';
+@import 'badge/badge.css';
+@import 'blockquote/blockquote.css';
+@import 'Button/button.css';
+@import 'callout/callout.css';
+@import 'card/card.css';
+@import 'checkbox/checkbox-cards.css';
+@import 'checkbox/checkbox-group.css';
+@import 'checkbox/checkbox.css';
+@import 'code/code.css';
+@import 'context-menu/context-menu.css';
+@import 'list/data-list.css';
+@import 'dialog/dialog.css';
+@import 'dropdown/dropdown-menu.css';
+@import 'em/em.css';
+@import 'heading/heading.css';
+@import 'card/hover-card.css';
+@import 'Button/icon-button.css';
+@import 'inset/inset.css';
+@import 'kbd/kbd.css';
+@import 'link/link.css';
+@import 'popover/popover.css';
+@import 'portal/progress.css';
+@import 'quote/quote.css';
+@import 'radio/radio-cards.css';
+@import 'radio/radio-group.css';
+@import 'radio/radio.css';
+@import 'scroll-area/scroll-area.css';
+@import 'segmented/segmented-control.css';
+@import 'select/select.css';
+@import 'separator/separator.css';
+@import 'slider/slider.css';
+@import 'spinner/spinner.css';
+@import 'strong/strong.css';
+@import 'switch/switch.css';
+@import 'tab/tab-nav.css';
+@import 'table/table.css';
+@import 'tab/tabs.css';
+@import 'text-area/text-area.css';
+@import 'text-field/text-field.css';
+@import 'theme-panel/theme-panel.css';
+@import 'tooltip/tooltip.css';
+
+.radix-themes:where([data-is-root-theme='true']) {
+  /* Create a new stacking context on the root `Theme` so layered components work out of the box */
+  position: relative;
+  z-index: 0;
+
+  /* Make sure root `Theme` background covers the viewport */
+  min-height: 100vh;
+  @supports (min-height: 100dvh) {
+    min-height: 100dvh;
+  }
+}
